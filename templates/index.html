@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manhwa Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>😭😭 Manhwa Tracker</h1>
+        <p>meow meow go readddd , there are new chapters!!!!👀</p>
+    </header>
+
+    <main>
+        <div id="manhwas" class="grid">
+            <!-- This will be dynamically populated by script.js -->
+        </div>
+    </main>
+
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
