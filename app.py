@@ -11,10 +11,10 @@ MANHWAS = [
 
 LANGUAGES = ["en"]
 
-# Function to get the latest chapter from MangaDex API
+
 def get_latest_chapter(title):
     try:
-        # Search for the manga by title
+      
         search_res = requests.get(
             "https://api.mangadex.org/manga",
             params={"title": title},
@@ -27,7 +27,7 @@ def get_latest_chapter(title):
 
         manga_id = manga_list[0]["id"]
 
-        # Fetch the latest chapter
+        
         chap_res = requests.get(
             "https://api.mangadex.org/chapter",
             params={
@@ -60,4 +60,4 @@ def latest_chapters():
     return jsonify(results)
 
 if __name__ == "__main__":
-    app.run(debug=True)  # Make sure Flask is running in debug mode
+    app.run(debug=True) 
