@@ -48,12 +48,12 @@ def get_latest_chapter(title):
         return "N/A"
 
 
-# Route for the homepage (index.html)
+
 @app.route("/")
 def index():
-    return render_template("index.html")  # Flask will look for this file in the 'templates' folder
+    return render_template("index.html") 
 
-# Route for fetching the latest chapters data
+
 @app.route("/latest-chapters")
 def latest_chapters():
     results = {title: get_latest_chapter(title) for title in MANHWAS}
